@@ -12,10 +12,18 @@ output:
 
 [data](https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-07-07)
 
-```{r}
-library(tidyverse)
-library(ggplot2)
-library(dplyr)
+```{r setup, include=FALSE}
+#knitr::opts_chunk$set(echo = TRUE, error=TRUE, message=FALSE, warning=FALSE)
+```
+
+```{r libraries}
+library(tidyverse)     # for data cleaning and plotting
+library(gardenR)       # for Lisa's garden data
+library(lubridate)     # for date manipulation
+library(openintro)     # for the abbr2state() function
+library(palmerpenguins)# for Palmer penguin data
+library(maps)          # for map data
+library(ggmap)         # for mapping points on maps
 library(gplots)        # for col2hex() function
 library(RColorBrewer)  # for color palettes
 library(sf)            # for working with spatial data
@@ -23,17 +31,17 @@ library(leaflet)       # for highly customizable mapping
 library(ggthemes)      # for more themes (including theme_map())
 library(plotly)        # for the ggplotly() - basic interactivity
 library(gganimate)     # for adding animation layers to ggplots
-library(ggimage)       # for including images on plots
 library(transformr)    # for "tweening" (gganimate)
-library(maps)          # for map data
-library(ggmap)         # for mapping points on maps
-library(lubridate)
+library(shiny)         # for creating interactive apps
+library(patchwork)     # for nicely combining ggplot2 graphs  
+library(gt)            # for creating nice tables
+library(rvest)         # for scraping data
+library(robotstxt)     # for checking if you can scrape data
+library(tidytuesdayR)
+theme_set(theme_minimal())
 ```
 
-```{r}
-library(tidyverse)
-library(tidytuesdayR)
-
+```{r data}
 tuesdata <- tidytuesdayR::tt_load('2020-07-07')
 tuesdata <- tidytuesdayR::tt_load(2020, week = 28)
 
