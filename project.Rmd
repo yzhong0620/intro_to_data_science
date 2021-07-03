@@ -65,3 +65,33 @@ coffee_ratings %>%
         legend.position = "none")
 ```
 
+
+```{r}
+coffee_ratings %>% 
+  filter(processing_method == c("Washed / Wet","Semi-washed / Semi-pulped","Pulped natural / honey", "Other", "Natural / Dry")) %>% 
+  ggplot(aes(y = processing_method, 
+             x = moisture)) + 
+  geom_boxplot() + 
+  labs(title = "How processing method affects moisture of coffee beans",
+       x = "Moisture",
+       y = "")
+
+coffee_ratings %>% 
+  filter(processing_method == c("Washed / Wet","Semi-washed / Semi-pulped","Pulped natural / honey", "Other", "Natural / Dry")) %>% 
+  ggplot(aes(y = processing_method, 
+             x = aroma)) + 
+  geom_boxplot() + 
+  labs(title = "How processing method affects aroma of coffee beans",
+       x = "Aroma",
+       y = "")
+
+coffee_ratings %>% 
+  filter(processing_method == c("Washed / Wet","Semi-washed / Semi-pulped","Pulped natural / honey", "Other", "Natural / Dry")) %>% 
+  ggplot(aes(y = processing_method, 
+             fill = color)) + 
+  geom_bar() + 
+  labs(title = "How processing methods compared with the color of coffee beans",
+       x = "Aroma",
+       y = "")
+
+```
