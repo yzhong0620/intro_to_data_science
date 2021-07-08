@@ -1,0 +1,28 @@
+---
+title: "Final Project"
+author: "Laurel Hickey, Eli Ivanov, Charlie Lam-Lu, Yunyang Zhong"
+date: "7/7/2021"
+output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: paged
+    code_download: true
+---
+
+# Background
+
+
+
+# Data
+
+
+
+# User's Manuel
+
+Through this shiny app, the countries of interest can be selected for as well as the processing methods of interest.  Once these two criteria have been selected, in order to create a plot, the "Create my plot!" button should be pushed.  By pushing this button the plots will be rendered with the criteria of interest.  There are five different plots that will be rendered each on a different tab.  The rating tab shows the distribution of the total rating for each country selected as well as the distribution by bean variety.  The moisture tab looks at the moisture of the beans by the selected processing methods.  The aroma tab looks at the aroma the beans by the selected processing methods. The acidity tab looks at the acidity by processing method selected and the distribution of color of the beans. The aroma by country tab looks at aroma by processing method and country of origin.
+
+# Shiny App
+
+[Coffee Ratings](https://laurelh.shinyapps.io/Coffee_Ratings/)
