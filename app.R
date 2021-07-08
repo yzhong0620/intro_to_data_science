@@ -22,7 +22,7 @@ ui <- fluidPage(
     tabPanel("rating", plotOutput(outputId = "plot1")), 
     tabPanel("moisture", plotOutput(outputId = "plot2")), 
     tabPanel("aroma", plotOutput(outputId = "plot3")),
-    tabPanel("aroma by color", plotOutput(outputId = "plot4")), 
+    tabPanel("acidity", plotOutput(outputId = "plot4")), 
     tabPanel("aroma by country", plotOutput(outputId = "plot5")))
 )
 
@@ -70,9 +70,10 @@ server <- function(input, output) {
     coffee_ratings %>% 
       filter(processing_method == c("Washed / Wet","Semi-washed / Semi-pulped","Pulped natural / honey", "Other", "Natural / Dry"),
              processing_method %in% input$processingmethod) %>% 
-      ggplot(aes(y = processing_method, 
-                 fill = color)) + 
-      geom_bar() + 
+      ggplot(aes(x = acidity,
+                 y = processing_method)) + 
+      geom_violin() + 
+      geom_point(aes(color = color), size = 2) +
       labs(title = "How processing methods compared with the color of coffee beans",
            x = "Aroma",
            y = "")
@@ -81,9 +82,10 @@ server <- function(input, output) {
     coffee_ratings %>% 
       filter(processing_method == c("Washed / Wet","Semi-washed / Semi-pulped","Pulped natural / honey", "Other", "Natural / Dry"),
              country_of_origin %in% input$country) %>% 
-      ggplot(aes(y = processing_method, 
-                 fill = country_of_origin)) + 
-      geom_bar() + 
+      ggplot(aes(x = aroma,
+                 y = processing_method)) + 
+      geom_violin() + 
+      geom_point(aes(color = country_of_origin), size = 2) +
       labs(title = "How processing methods compared with the color of coffee beans",
            x = "Aroma",
            y = "")
