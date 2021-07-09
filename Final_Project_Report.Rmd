@@ -17,6 +17,7 @@ output:
 
 # Data
 
+The coffe_ratings data set comes from the coffee quality database and was retrieved from github’s Tidy Tuesday. This dataset has 43 variables, 22 qualitative variables and 21 quantitative variables. Some of the quantitative variables are a grade point assigned to a qualitative aspect of coffee such as aroma and flavor. Each of these aspects are, in part, unique to the region where the coffee was produced and different aspects of the coffee’s production. This influence is accounted for in the data set by qualitative variables such as region, altitude, and variety of bean (arabica or robusta). We chose to mainly focus on the grade point variables because they provide a quantitative representation of characteristics that are qualitative.
 
 
 # User's Manuel
