@@ -1,0 +1,33 @@
+---
+title: "Final Project"
+author: "Laurel Hickey, Eli Ivanov, Charlie Lam-Lu, Yunyang Zhong"
+date: "7/7/2021"
+output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: paged
+    code_download: true
+---
+
+# Background
+Coffee is among the most common beverages in the world. Naturally, the global community of consumers, reviewers, and producers has developed certain standard practices for assessing the quality of a coffee. These “Q Graders” attempt to assess the various facets of the coffee’s taste. Coffee’s flavor is judged in terms of its body (texture and oiliness), sweetness, acidity (a qualitative assessment of sharpness and tanginess – not pH), flavor, and aftertaste. These factors taken together contribute to the final score of a coffee. First and foremost, we wanted to explore how the ranges and average ratings of coffees compare between producer countries.
+It is fairly easy to compare the average coffee ratings of different producer countries. This is not altogether unhelpful, as different countries naturally favor different growth conditions and production methods. However, as we dug deeper we found that determinants of flavor are far more complex than the country of origin alone – production methods also develop different flavors within the coffees. What impact does processing have on the final product?
+To get a clearer understanding of this, we chose three different production-dependent variables to examine. These variables and their effects are as follows:
+•	Moisture: Good indicator of how well a coffee will keep its flavors during storage/transport. Production methods result in different final moisture contents, ultimately muting or mutating the flavors if too high or low.
+•	Aroma: Intimately connected to the flavor of coffee. A good (or bad) aroma is the result of the effectiveness of the production itself. Different compounds will be enhanced or degrade at different rates, resulting in varying levels of aromatic intensity. For example, citric acids contribute to coffee’s fruitier flavors. Roasting too long will mute or even completely eliminate those aspects from the coffee.
+•	Acidity: Different processes of bean preparation are generally said to produce different end-product acidities, which play directly into coffee ratings.
+It is important to clarify that only the final two variables play into Q Graders’ final scores. We chose to look at these three in particular because they are all affected by different parts of the production process. This provides the viewer a more holistic view of the far-reaching implications of seemingly minor differences between producers.
+
+# Data
+
+
+
+# User's Manual
+
+This shiny app allows the user to select both the countries and processing methods of interest.  Once these two criteria have been selected, the plot can be made simply by pressing the "Create my plot!" button. Plots will be rendered with the criteria of interest.  There are five different plots that will be rendered each on a different tab. The rating tab shows the distribution of the total rating for each country selected as well as the distribution by bean variety.  The moisture tab looks at the moisture of the beans by the selected processing methods.  The aroma tab looks at the aroma the beans by the selected processing methods. The acidity tab looks at the acidity by processing method selected and the distribution of color of the beans. The aroma by country tab looks at aroma by processing method and country of origin.
+
+# Shiny App
+
+[Coffee Ratings](https://laurelh.shinyapps.io/Coffee_Ratings/)
